@@ -5,7 +5,7 @@ import Adopt from './components/Adopt';
 import Learn from './components/Learn';
 import Help from './components/Help';
 import PetDetails from './components/PetDetails';
-import Home from './Home';
+import Home from './components/Home';
 
 const App = () => (
   <Router>
