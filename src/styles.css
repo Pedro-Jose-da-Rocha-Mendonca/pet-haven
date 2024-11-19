@@ -1,0 +1,146 @@
+/* General Reset */
+body, h1, h2, h3, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #FFF4B7; /* Soft Yellow Background */
+    color: #000B58; /* Dark Blue Text */
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Persistent Navigation Bar */
+  .navbar {
+    background-color: #003161; /* Medium Blue */
+    color: #FFF4B7; /* Soft Yellow */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar a {
+    color: #FFF4B7;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    color: #006A67; /* Teal */
+  }
+  
+  .navbar .active {
+    color: #006A67;
+    border-bottom: 2px solid #FFF4B7;
+  }
+  
+  /* General Section Styling */
+  section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: white;
+    border: 2px solid #003161; /* Medium Blue Border */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #006A67; /* Teal */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #003161; /* Medium Blue */
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #000B58; /* Dark Blue */
+    color: #FFF4B7; /* Soft Yellow */
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 5px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  /* Cards for Sections (Adopt, Learn, Help) */
+  .home-card, .help-card {
+    background-color: white;
+    border: 2px solid #006A67; /* Teal Border */
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .home-card:hover, .help-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .home-card button, .help-card button {
+    margin-top: 10px;
+  }
+  
+  /* List Styling for Learn Page */
+  .learn-content ul {
+    padding-left: 20px;
+  }
+  
+  .learn-content ul li {
+    margin: 5px 0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #003161; /* Medium Blue */
+    color: #FFF4B7; /* Soft Yellow */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .home-sections, .help-options {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    section {
+      margin: 10px;
+      padding: 15px;
+    }
+  }
+  
