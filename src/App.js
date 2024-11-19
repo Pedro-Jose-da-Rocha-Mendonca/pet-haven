@@ -7,21 +7,21 @@ import Help from './components/Help';
 import Navbar from './components/Navbar';
 import PetDetails from './components/PetDetails';
 
-const App = () => {
+function App() {
   return (
-    <Router> 
+    <Router basename="/app">
       <div className="App">
         <Navbar /> 
-        <Routes> 
-          <Route path="/" element={<Home />} /> 
-          <Route path="adopt" element={<Adopt />} /> 
-          <Route path="learn" element={<Learn />} /> 
-          <Route path="help" element={<Help />} /> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="adopt" element={<Adopt />} />
+          <Route path="learn" element={<Learn />} />
+          <Route path="help" element={<Help />} />
           <Route path="pet/:id" element={<PetDetails />} />
         </Routes>
       </div>
     </Router>
   );
-};
+}
 
 export default App;
