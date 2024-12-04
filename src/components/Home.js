@@ -25,6 +25,11 @@ const Home = () => {
           <p>Support our mission by volunteering, fostering, or donating.</p>
           <button onClick={() => window.location.href = '/help'}>Get Involved</button>
         </div>
+        <div className="home-card">
+          <h2>About Us</h2>
+          <p>Learn about our mission to connect loving homes with pets in need.</p>
+          <button onClick={() => window.location.href = '/about'}>About Us</button>
+        </div>
       </section>
     </div>
   );

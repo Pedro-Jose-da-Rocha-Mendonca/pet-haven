@@ -3,13 +3,13 @@
     "version": "1.0.0",
     "private": true,
     "description": "A React app for pet adoption",
-    "homepage": "https://pedro-jose-da-rocha-mendonca.github.io/pet-haven",
+    "homepage": "https://Pedro-Jose-da-Rocha-Mendonca.github.io/pet-haven",
     "dependencies": {
         "leaflet": "^1.9.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.14.0",
-        "react-scripts": "^5.0.0"
+        "react-router-dom": "^6.11.0",
+        "react-scripts": "^5.0.1"
     },
     "devDependencies": {
         "gh-pages": "^5.0.0"

@@ -1,61 +1,105 @@
-/* Learn.css */
-
-/* General page styles for Learn */
 .learn-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    background-color: #f9f9f9;
-    font-family: 'Arial', sans-serif;
+  padding: 40px 20px;
+  background-color: #f5e6d3;
+}
+
+.learn-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.learn-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.learn-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.learn-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.learn-content li {
+  margin-bottom: 10px;
+}
+
+.learn-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.learn-section {
+  margin-bottom: 40px;
+}
+
+.learn-section h2 {
+  color: #2c5282;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2c5282;
+  padding-bottom: 10px;
+}
+
+.info-box {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.info-box ul, .info-box ol {
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+.info-box li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.resources-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resources-list a {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resources-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .learn-page {
+    padding: 20px 15px;
   }
-  
+
   .learn-page h1 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 2em;
   }
-  
-  .learn-content {
-    background-color: #fff;
-    padding: 30px;
-    max-width: 800px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 20px;
+
+  .learn-section h2 {
+    font-size: 1.5em;
   }
-  
-  .learn-content p {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 20px;
+
+  .info-box {
+    padding: 15px;
   }
-  
-  .learn-content ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .learn-content li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .learn-content li::marker {
-    color: #007bff;
-  }
-  
-  .learn-content a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .learn-content a:hover {
-    text-decoration: underline;
-  }
-  
+}

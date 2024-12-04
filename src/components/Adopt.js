@@ -1,28 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { searchAdoptionCenters } from '../services/petApi';
+import Map from './Map';
 import './Adopt.css';
 
 const Adopt = () => {
-  const [pets, setPets] = useState([]);
+  const [centers, setCenters] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/api/pets')
-      .then((response) => response.json())
-      .then((data) => setPets(data))
-      .catch((error) => console.error('Error fetching pets:', error));
+    const fetchCenters = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const data = await searchAdoptionCenters();
+        setCenters(data);
+      } catch (err) {
+        setError(err.message);
+        console.error('Error fetching centers:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCenters();
   }, []);
 
   return (
     <div className="adopt-page">
-      <h1>Available Pets for Adoption</h1>
-      <div className="pets-grid">
-        {pets.map((pet) => (
-          <Link to={`/pet/${pet.id}`} key={pet.id} className="pet-card">
-            <img src={pet.photo} alt={pet.name} />
-            <h3>{pet.name}</h3>
-          </Link>
-        ))}
-      </div>
+      <h1>Find Adoption Centers Near You</h1>
+      <p className="adopt-description">
+        Click on any marker to see detailed information about the adoption center.
+      </p>
+      
+      {isLoading && <div className="loading">Loading adoption centers...</div>}
+      {error && <div className="error-message">Error: {error}</div>}
+      
+      {!isLoading && !error && centers.length === 0 && (
+        <div className="no-results">No adoption centers found</div>
+      )}
+      
+      {centers.length > 0 && (
+        <div className="map-container">
+          <Map centers={centers} />
+        </div>
+      )}
     </div>
   );
 };
