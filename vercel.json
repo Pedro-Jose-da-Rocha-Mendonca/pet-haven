@@ -9,9 +9,5 @@
   "trailingSlash": false,
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "public": true,
-  "static": {
-    "public": "public",
-    "src": "src"
-  }
+  "public": true
 }
