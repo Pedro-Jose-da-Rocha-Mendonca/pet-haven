@@ -9,14 +9,6 @@
       "destination": "/favicon.ico"
     },
     {
-      "source": "/manifest.json",
-      "destination": "/manifest.json"
-    },
-    {
-      "source": "/asset-manifest.json",
-      "destination": "/asset-manifest.json"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
