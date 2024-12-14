@@ -1,13 +1,9 @@
 {
   "rewrites": [
     {
-      "source": "/pet-haven/(.*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
   ],
   "cleanUrls": true
 }
