@@ -12,21 +12,23 @@ import { AuthProvider } from './services/AuthContext';
 
 const App = () => {
   return (
-    <div className="app">
-      <Navbar />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/adopt" element={<Adopt />} />
-          <Route path="/learn" element={<Learn />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
-    </div>
+    <AuthProvider>
+      <div className="app">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/adopt" element={<Adopt />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+      </div>
+    </AuthProvider>
   );
 };
 
