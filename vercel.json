@@ -1,35 +1,17 @@
 {
   "rewrites": [
     {
-      "source": "/static/:path*",
-      "destination": "/static/:path*"
-    },
-    {
-      "source": "/assets/:path*",
-      "destination": "/assets/:path*"
-    },
-    {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "continue": true
-    },
-    {
-      "handle": "filesystem"
     }
   ],
   "cleanUrls": true,
   "trailingSlash": false,
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "public": true
+  "public": true,
+  "static": {
+    "public": "public",
+    "src": "src"
+  }
 }
