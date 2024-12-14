@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pet-haven/static/css/main.88ad58d7.css",
+    "main.js": "/pet-haven/static/js/main.b883a913.js",
+    "static/js/952.6f183a00.chunk.js": "/pet-haven/static/js/952.6f183a00.chunk.js",
+    "index.html": "/pet-haven/index.html",
+    "main.88ad58d7.css.map": "/pet-haven/static/css/main.88ad58d7.css.map",
+    "main.b883a913.js.map": "/pet-haven/static/js/main.b883a913.js.map",
+    "952.6f183a00.chunk.js.map": "/pet-haven/static/js/952.6f183a00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88ad58d7.css",
+    "static/js/main.b883a913.js"
+  ]
+}

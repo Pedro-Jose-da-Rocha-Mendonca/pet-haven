@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { searchAdoptionCenters } from '../services/petApi';
-import Map from './Map';
+import { searchAdoptionCenters } from '../../../services/petApi';
+import Map from '../map/Map';
 import './Adopt.css';
 
 const Adopt = () => {

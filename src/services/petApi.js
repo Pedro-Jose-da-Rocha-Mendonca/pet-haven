@@ -95,3 +95,31 @@ const transformCenterData = (data) => {
     citystate: org.attributes.citystate
   }));
 };
+
+export const fetchContactSubmissions = async () => {
+  try {
+    const response = await fetch('/api/contacts');
+    if (!response.ok) throw new Error('Failed to fetch contacts');
+    return await response.json();
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
+
+export const submitContactForm = async (formData) => {
+  try {
+    const response = await fetch('/api/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData)
+    });
+    if (!response.ok) throw new Error('Failed to submit form');
+    return await response.json();
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};
